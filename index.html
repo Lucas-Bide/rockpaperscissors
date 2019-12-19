@@ -31,7 +31,7 @@
             }
         }
         function game()
-        {
+        {                                                                      
             let playerPoints = 0;
             let compuPoints = 0;
 
@@ -46,14 +46,16 @@
                     compuPoints++;
             }
             let result = "Game Over. ";
-            result += (playerPoints > compuPoints) ? "You Win!" : (playerPoints < compuPoints) ? "You Lose!" : "It's a tie!";
+            result += ((playerPoints > compuPoints) ? "You Win!" : 
+                    (playerPoints < compuPoints) ? "You Lose!" : "It's a tie!");
             console.log(result);
         }
 
         function playerPlay()
         {
             let play = "";
-            while (play.toLowerCase() !== "rock" && play.toLowerCase() !== "paper" && play.toLowerCase() !== "scissors")
+            while (play.toLowerCase() !== "rock" && play.toLowerCase()                    
+                    !== "paper" && play.toLowerCase() !== "scissors")
                 play = prompt("Choose Rock, Paper, or Scissors")
             return play;
         }
