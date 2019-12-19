@@ -2,11 +2,14 @@
 <html>
     <script>
         function computerPlay()
-        {}
-        function playRound(playerSelection, ComputerSelection)
+        {
+            let play = Math.floor(Math.random() * 3);
+            return (play === 0) ? "Rock" : (play === 1) ? "Paper" : "Scissors";
+        }
+        function playRound(playerSelection, computerSelection)
         {}
         function game()
         {}
-        
+
     </script>
 </html>
