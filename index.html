@@ -11,19 +11,19 @@
             if (playerSelection.toLowerCase() === computerSelection.toLowerCase())
                 return `You tied with ${computerSelection}.`;
 
-            if (playerSelection === /rock/i)
+            if (playerSelection.toLowerCase() === "rock")
             {
                 if (computerSelection === "Paper")
                     return "You Lose! Paper beats Rock.";
                 return "You Win! Rock beats Scissors.";  
             }
-            else if (playerSelection === /paper/i)
+            else if (playerSelection.toLowerCase() === "paper")
             {
                 if (computerSelection === "Scissors")
                     return "You Lose! Scissors beat Paper.";
                 return "You Win! Paper beats Rock";
             }
-            else if (playerSelection === /scissors/i)
+            else if (playerSelection.toLowerCase() === "scissors")
             {
                 if (computerSelection === "Rock")
                     return "You Lose! Rock beats Scissors.";
@@ -31,7 +31,9 @@
             }
         }
         function game()
-        {}
+        {
+
+        }
 
     </script>
 </html>
