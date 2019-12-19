@@ -32,7 +32,30 @@
         }
         function game()
         {
+            let playerPoints = 0;
+            let compuPoints = 0;
 
+            console.log("Welcome to a five round game of RPS!")
+            for (i = 0; i < 5; i++)
+            {
+                let result = playRound(playerPlay(), computerPlay());
+                console.log(result);
+                if (result.includes("Win"))
+                    playerPoints++;
+                else if (result.includes("Lose"))
+                    compuPoints++;
+            }
+            let result = "Game Over. ";
+            result += (playerPoints > compuPoints) ? "You Win!" : (playerPoints < compuPoints) ? "You Lose!" : "It's a tie!";
+            console.log(result);
+        }
+
+        function playerPlay()
+        {
+            let play = "";
+            while (play.toLowerCase() !== "rock" && play.toLowerCase() !== "paper" && play.toLowerCase() !== "scissors")
+                play = prompt("Choose Rock, Paper, or Scissors")
+            return play;
         }
 
     </script>
