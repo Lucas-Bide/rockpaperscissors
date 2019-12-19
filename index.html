@@ -7,7 +7,29 @@
             return (play === 0) ? "Rock" : (play === 1) ? "Paper" : "Scissors";
         }
         function playRound(playerSelection, computerSelection)
-        {}
+        {
+            if (playerSelection.toLowerCase() === computerSelection.toLowerCase())
+                return `You tied with ${computerSelection}.`;
+
+            if (playerSelection === /rock/i)
+            {
+                if (computerSelection === "Paper")
+                    return "You Lose! Paper beats Rock.";
+                return "You Win! Rock beats Scissors.";  
+            }
+            else if (playerSelection === /paper/i)
+            {
+                if (computerSelection === "Scissors")
+                    return "You Lose! Scissors beat Paper.";
+                return "You Win! Paper beats Rock";
+            }
+            else if (playerSelection === /scissors/i)
+            {
+                if (computerSelection === "Rock")
+                    return "You Lose! Rock beats Scissors.";
+                return "You Win! Scissors beat Paper.";
+            }
+        }
         function game()
         {}
 
